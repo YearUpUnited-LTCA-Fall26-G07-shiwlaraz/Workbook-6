@@ -23,7 +23,7 @@ public class Square extends Shape {
         turtle.setColor(getColor());
 
         turtle.setPenWidth(getBorder());
-        turtle.setDelay(0.1);
+        turtle.setDelay(0.001);
         turtle.penDown();
 
         for (int i = 0; i < 4; i++) {

@@ -6,10 +6,10 @@ import java.awt.Point;
 import com.pluralsight.Shape;
 import com.pluralsight.Turtle;
 
-public class House extends Shape {
+public class Hut extends Shape {
     public double side;
 
-    public House(Turtle turtle, Point location, Color color, double border, double side) {
+    public Hut(Turtle turtle, Point location, Color color, double border, double side) {
         super (turtle, location, color, border);
         this.side = side;
     }
@@ -19,7 +19,7 @@ public class House extends Shape {
         Turtle turtle = getTurtle();
 
         turtle.setPenWidth(3);
-        turtle.setColor(Color.green);
+        turtle.setColor(getColor());
         turtle.penDown();
 
         for (int i = 0; i < 4; i++) {

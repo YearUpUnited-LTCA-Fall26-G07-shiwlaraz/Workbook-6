@@ -1,6 +1,7 @@
 package Persistants;
 
 import Shapes.Circle;
+import Shapes.Hut;
 import Shapes.Square;
 import Shapes.Triangle;
 import com.pluralsight.Shape;
@@ -19,13 +20,15 @@ public class UserInterface {
                                         1 - Creat a square
                                         2 - Creat a circle
                                         3 - Creat a triangle;
-                                        4 - Create a house;
+                                        4 - Create a Small hut;
 
                     """);
             int choice = Console.promptForInt("Enter the Choice number you want to create");
             switch (choice)  {
-                case 1 -> CreateSquare();
-                case 2 -> CreateCircle();
+                case 1 -> createSquare();
+                case 2 -> createCircle();
+                case 3 -> createTriangle();
+                case 4 -> createHut();
             }
 
         }
@@ -57,7 +60,7 @@ public class UserInterface {
     }
 
 
-    public void CreateSquare() {
+    public void createSquare() {
 
         World world = new World(600, 600);
         Turtle turtle = new Turtle(world);
@@ -77,7 +80,7 @@ public class UserInterface {
         );
 
         square.paint();
-    }public void CreateCircle() {
+    }public void createCircle() {
         World world = new World(600, 600);
         Turtle turtle = new Turtle(world);
 
@@ -87,13 +90,52 @@ public class UserInterface {
         int border = Console.promptForInt("Enter Border Size");
         int size = 100;
 
-        Shape Circle = new Circle(
+        Shape circle = new Circle(
                 turtle,
                 new Point(pointX, pointY),
                 getColor(),
                 border,
                 radius
         );
+        circle.paint();
+    }
+
+    public void createTriangle() {
+        World world = new World(600, 600);
+        Turtle turtle = new Turtle(world);
+
+        int pointX = Console.promptForInt("Enter X location");
+        int pointY = Console.promptForInt("Enter Y location");
+        int border = Console.promptForInt("Enter The border");
+        double side = Console.promptForDouble("Enter Side");
+
+        Shape triangle = new Triangle(
+                turtle,
+                new Point(pointX, pointY),
+                getColor(),
+                border,
+                side
+        );
+        triangle.paint();
+
+    }
+    public void createHut() {
+        World world = new World(600, 600);
+        Turtle turtle = new Turtle(world);
+
+        int pointX = Console.promptForInt("Enter X location");
+        int pointY = Console.promptForInt("Enter Y location");
+        int border = Console.promptForInt("Enter The border");
+        double side = Console.promptForDouble("Enter Side");
+
+        Shape house = new Hut(
+                turtle,
+                new Point(pointX, pointY),
+                getColor(),
+                border,
+                side
+        );
+        house.paint();
     }
 
 }
