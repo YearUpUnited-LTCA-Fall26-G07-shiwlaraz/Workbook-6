@@ -1,0 +1,10 @@
+# Default ignored files
+/../../portfolio-manager./.idea/shelf/
+/../../portfolio-manager./.idea/workspace.xml
+# Editor-based HTTP Client requests
+/../../portfolio-manager./.idea/httpRequests/
+# Ignored default folder with query files
+/../../portfolio-manager./.idea/queries/
+# Datasource local storage ignored files
+/../../portfolio-manager./.idea/dataSources/
+/../../portfolio-manager./.idea/dataSources.local.xml

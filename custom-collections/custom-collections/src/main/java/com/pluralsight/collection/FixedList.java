@@ -16,7 +16,8 @@ public class FixedList<T> {
         if (items.size() < maxSize) {
             items.add(item);
         } else {
-            System.out.println("List is full!");
+
+            throw new IllegalStateException("List is full!");
         }
     }
 
