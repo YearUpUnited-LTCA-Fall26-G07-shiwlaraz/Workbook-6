@@ -28,7 +28,7 @@ public class Circle extends Shape{
         double circumference = 2 * Math.PI * radius;
         double distance = circumference / 360;
         turtle.penDown();
-        turtle.setDelay(0.01);
+        turtle.setDelay(0.001);
         for (int i = 0; i < 360; i++) {
             turtle.forward(distance);
             turtle.turnRight(1);

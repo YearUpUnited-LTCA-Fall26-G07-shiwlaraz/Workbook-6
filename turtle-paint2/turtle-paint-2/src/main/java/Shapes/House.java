@@ -19,7 +19,7 @@ public class House extends Shape {
         Turtle turtle = getTurtle();
 
         turtle.setPenWidth(3);
-        turtle.setColor(Color.BLUE);
+        turtle.setColor(Color.green);
         turtle.penDown();
 
         for (int i = 0; i < 4; i++) {
